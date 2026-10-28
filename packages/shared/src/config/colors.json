@@ -1,0 +1,12 @@
+{
+  "primary": "#002B63",
+  "primaryLight": "#1D4E8F",
+  "primaryDark": "#001A3D",
+  "secondary": "#40A75E",
+  "secondaryLight": "#E8F5EC",
+  "secondaryDark": "#2F8247",
+  "surface": "#F4F6FA",
+  "muted": "#65666A",
+  "danger": "#DC2626",
+  "warning": "#F59E0B"
+}

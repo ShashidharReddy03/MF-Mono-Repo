@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Classic theme defaults — replaced at runtime by the selected theme (shared/config/theme.ts) */
+  --c-primary: 0 43 99;
+  --c-primary-light: 29 78 143;
+  --c-primary-dark: 0 26 61;
+  --c-secondary: 64 167 94;
+  --c-secondary-light: 232 245 236;
+  --c-secondary-dark: 47 130 71;
+  --c-surface: 244 246 250;
+  --c-muted: 101 102 106;
+  --c-danger: 220 38 38;
+  --c-warning: 245 158 11;
+}
+
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    @apply min-h-screen;
+  }
+  body {
+    @apply bg-surface font-sans text-primary antialiased;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-secondary;
+  }
+}
+
+@keyframes loader {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(300%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---- antd tweaks ---- */
+.ant-form-item .ant-form-item-label > label {
+  @apply text-[13px] font-medium;
+}
+.ant-form-item .ant-form-item-explain-error {
+  @apply mt-1 text-xs;
+}
+.mf-stepper .ant-steps-item-title {
+  @apply !text-xs;
+}
+@media (max-width: 480px) {
+  .mf-stepper .ant-steps-item-title { @apply !hidden; }
+}
+
+/* Account card pattern: fine concentric arcs, the one decorative element in the app */
+.account-card {
+  background-color: rgb(var(--c-primary));
+  background-image:
+    radial-gradient(circle at 115% -20%, transparent 38%, rgba(255, 255, 255, 0.06) 38.5%, transparent 39%),
+    radial-gradient(circle at 115% -20%, transparent 48%, rgba(255, 255, 255, 0.05) 48.5%, transparent 49%),
+    radial-gradient(circle at 115% -20%, transparent 58%, rgb(var(--c-secondary) / 0.25) 58.5%, transparent 59.5%);
+}
+.account-card[data-selected="true"] {
+  box-shadow: 0 0 0 3px rgb(var(--c-secondary));
+}

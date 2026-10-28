@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- MF Bank monogram: same green tile + white "MF" as the in-app <Logo /> -->
+  <rect width="64" height="64" rx="14" fill="#40A75E"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 46V19l10 14 10-14v27"/>
+    <path d="M41 46V19h13M41 33h10"/>
+  </g>
+</svg>

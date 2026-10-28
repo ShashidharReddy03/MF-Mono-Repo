@@ -1,0 +1,25 @@
+{
+  "name": "mf-bank",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "web": "npm run dev -w @mf-bank/web",
+    "web:build": "npm run build -w @mf-bank/web",
+    "web:build:prod": "npm run build:prod -w @mf-bank/web",
+    "mobile": "npm run start -w @mf-bank/mobile",
+    "android": "npm run android -w @mf-bank/mobile",
+    "ios": "npm run ios -w @mf-bank/mobile",
+    "mobile:web": "npm run web -w @mf-bank/mobile",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "i18n:check": "node scripts/i18n-check.mjs",
+    "security:audit": "npm audit --omit=dev --audit-level=high",
+    "security:check": "npm run typecheck && npm run i18n:check && npm run security:audit"
+  },
+  "engines": {
+    "node": ">=20.19.4"
+  }
+}

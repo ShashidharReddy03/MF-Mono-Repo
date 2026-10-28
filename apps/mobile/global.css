@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Classic theme defaults — replaced at runtime by the selected theme (shared/config/theme.ts) */
+  --c-primary: 0 43 99;
+  --c-primary-light: 29 78 143;
+  --c-primary-dark: 0 26 61;
+  --c-secondary: 64 167 94;
+  --c-secondary-light: 232 245 236;
+  --c-secondary-dark: 47 130 71;
+  --c-surface: 244 246 250;
+  --c-muted: 101 102 106;
+  --c-danger: 220 38 38;
+  --c-warning: 245 158 11;
+}

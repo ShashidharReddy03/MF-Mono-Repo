@@ -1,0 +1,73 @@
+{
+  "_comment": "Security lists shared by the app (src/core/security) and plugins/withAndroidHardening.js. Android = package names, iOS = URL schemes.",
+  "remoteAccessApps": {
+    "android": [
+      "com.anydesk.anydeskandroid",
+      "com.teamviewer.quicksupport.market",
+      "com.teamviewer.host.market",
+      "com.carriez.flutter_hbb",
+      "com.rustdesk.rustdesk",
+      "com.sand.airdroid",
+      "com.sand.airdroidbiz",
+      "com.splashtop.streamer.addon.knox",
+      "com.realvnc.viewer.android",
+      "com.zoho.assist.agent"
+    ],
+    "ios": [
+      "anydesk",
+      "teamviewerqs",
+      "rustdesk"
+    ]
+  },
+  "blacklistedApps": {
+    "android": [
+      "com.topjohnwu.magisk",
+      "io.github.huskydg.magisk",
+      "me.weishu.kernelsu",
+      "org.lsposed.manager",
+      "de.robv.android.xposed.installer",
+      "org.meowcat.edxposed.manager",
+      "com.saurik.substrate",
+      "eu.chainfire.supersu",
+      "com.koushikdutta.superuser",
+      "com.noshufou.android.su",
+      "com.guoshi.httpcanary",
+      "app.greyshirts.sslcapture",
+      "com.emanuelef.remote_capture",
+      "com.minhui.networkcapture",
+      "com.lbe.parallel.intl",
+      "com.parallel.space.lite"
+    ],
+    "ios": [
+      "cydia",
+      "sileo",
+      "zbra",
+      "filza",
+      "undecimus",
+      "activator"
+    ]
+  },
+  "trustedAccessibility": [
+    "com.google.android.marvin.talkback",
+    "com.google.android.apps.accessibility.voiceaccess",
+    "com.google.android.accessibility.switchaccess",
+    "com.samsung.android.accessibility.talkback",
+    "com.microsoft.appmanager",
+    "com.lastpass.lpandroid",
+    "com.x8bit.bitwarden",
+    "com.agilebits.onepassword"
+  ],
+  "trustedKeyboards": [
+    "com.google.android.inputmethod.latin",
+    "com.touchtype.swiftkey",
+    "com.samsung.android.honeyboard",
+    "com.sec.android.inputmethod"
+  ],
+  "trustedDeviceAdmins": [
+    "com.google.android.gms",
+    "com.google.android.apps.work.clouddpc",
+    "com.microsoft.windowsintune.companyportal",
+    "com.airwatch.androidagent",
+    "com.mobileiron"
+  ]
+}
